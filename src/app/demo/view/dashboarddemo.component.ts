@@ -7,6 +7,7 @@ import { AppMainComponent } from '../../app.main.component';
 import {AppConfig} from '../domain/appconfig';
 import {ConfigService} from '../service/app.config.service';
 import {Subscription} from 'rxjs';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
     templateUrl: './dashboard.component.html',
@@ -64,6 +65,34 @@ export class DashboardDemoComponent implements OnInit {
     }
 
     ngOnInit() {
+        var options = {
+            method: 'GET'
+          };
+
+          
+          fetch("http://localhost:3000/teams/newest", options)
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
+                this.showPlayer(result);
+            })
+            .catch(error => console.log('error', error));
+
+            var options2 = {
+                method: 'GET'
+            };
+    
+              
+              fetch("https://ballermetrics-backend2.onrender.com/teams/getPlayers/Pistons", options2)
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    this.showPlayers(result);
+                })
+                .catch(error => console.log('error', error));
+            
+
+
         this.productService.getProducts().then(data => this.products = data);
         this.productService.getProducts().then(data => this.productsThisWeek = data);
         this.productService.getProductsMixed().then(data => this.productsLastWeek = data);
@@ -152,7 +181,88 @@ export class DashboardDemoComponent implements OnInit {
             {name: 'This Week', code: '0'},
             {name: 'Last Week', code: '1'}
         ];
+
+        
     }
+
+    showPlayer(result:any)
+    {
+        console.log("drinnen");
+        console.log(result);
+
+        var output = "";
+        console.log(result[0]);
+
+        console.log(result[0].home_team_score);
+    
+    }
+
+    loadName()
+    {
+        console.log("name:");
+        const accessLogin = localStorage.getItem('accesstoken');
+        const refreshToken = localStorage.getItem('refreshtoken');
+
+        const decodedToken: any = jwtDecode(accessLogin);
+
+        const exp: number = decodedToken.sub;
+
+        const url1 = `https://ballermetrics-backend2.onrender.com/tradeGroupUser/getName/`+ exp;
+
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + accessLogin);
+
+        var requestOptions: RequestInit = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+          };
+
+        fetch(url1, requestOptions)
+        .then(res => {
+        if(!res.ok)
+        {
+            console.log("fetch fehler");
+        }
+        return res.json();
+        }).then(json => {
+        console.log(json);
+            
+
+        
+        }).catch(err => console.log(err));
+
+    }
+
+    
+
+    showPlayers(json:any)
+    {
+        var output="";
+
+        for(let i in json)
+        {
+            const firstname = json[i]['first_name'];
+            const lastName = json[i]['last_name'];
+            const position = json[i]['position']
+
+            console.log(firstname+lastName+position);
+
+            output+=(`<li>
+                    <div class="person">
+                        <img src="assets/layout/images/dashboard/leader-1.png" alt="poseidon-layout" />
+                        <p>${firstname} ${lastName}</p>
+                    </div>
+                    <div class="person-numbers">
+                        <h6>Position: ${position}</h6>
+                        
+                    </div>
+                </li>`);
+        }
+        document.getElementById('playerList').innerHTML = output;
+    }
+
+    
 
     getTrafficChartData() {
         return {

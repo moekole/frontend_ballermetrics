@@ -141,6 +141,8 @@ import {ConfigService} from './demo/service/app.config.service';
 import {MenuService} from './app.menu.service';
 import {AppBreadcrumbService} from './app.breadcrumb.service';
 import { MatchesComponent } from './demo/view/matches.component';
+import { RegisterComponent } from './pages/register.component';
+import { VeriComponent } from './pages/veri.component';
 
 @NgModule({
     imports: [
@@ -273,7 +275,9 @@ import { MatchesComponent } from './demo/view/matches.component';
         AppAccessdeniedComponent,
         BlocksComponent,
         BlockViewer,
-        MatchesComponent
+        MatchesComponent,
+        RegisterComponent,
+        VeriComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

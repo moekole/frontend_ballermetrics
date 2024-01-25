@@ -1,0 +1,31 @@
+<div class="login-body">
+    <div class="login-wrapper">
+        <div class="login-panel">
+            <a [routerLink]="['/']" class="logo">
+                <img src="assets/layout/images/logo.png" alt="poseidon-layout" />
+            </a>
+            <div class="login-form" style="justify-content: center;">
+                <h2>2FA</h2>
+                <p>Bestätige deinen Account</p>
+                <div class="p-fluid p-formgrid grid" style="align-items: center; justify-content: center; ">
+                  <div class="field col-8 md:col-2">
+                    <input type="text" id="input1" pInputText (input)="onInput($event, 2)">
+                  </div>
+                  <div class="field col-8 md:col-2">
+                    <input type="text" id="input2" pInputText (input)="onInput($event, 3)">
+                  </div>
+                  <div class="field col-8 md:col-2">
+                    <input type="text" id="input3" pInputText (input)="onInput($event, 4)">
+                  </div>
+                  <div class="field col-8 md:col-2">
+                    <input type="text" id="input4" pInputText (input)="onInput($event)">
+                  </div>
+                </div>
+                <button style="background-color: #006eff;border-color: transparent;" pButton pRipple label="Bestätigen" type="button" (click)="authenticate()" [routerLink]="'/dashboard'"></button>
+              </div>
+              
+
+            <p>Uptraded</p>
+        </div>
+    </div>
+</div>

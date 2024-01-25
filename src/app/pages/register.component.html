@@ -1,0 +1,58 @@
+<div class="login-body">
+    <div class="login-wrapper">
+        <div class="login-panel">
+            <a [routerLink]="['/']" class="logo">
+                <img src="assets/layout/images/logo.png" alt="poseidon-layout" />
+            </a>
+            
+            <div class="login-form">
+                <h2>Registrieren</h2>
+                <p-messages></p-messages>
+                <p>Hast du schon einen Account? <a [routerLink]="'/login'"> Login</a></p>
+                <div class="p-fluid p-formgrid grid">
+                    <div class="field col-12 md:col-6">
+                        <span class="p-float-label">
+                            <input type="text" id="vorname" pInputText >
+                            <label for="inputtext">Vorname</label>
+                        </span>
+                    </div>
+                    <div class="field col-12 md:col-6">
+                        <span class="p-float-label">
+                            <input type="text" id="nachname" pInputText >
+                            <label for="inputtext">Nachname</label>
+                        </span>
+                    </div>
+                    <div class="field col-12 md:col-12">
+                        <span class="p-float-label">
+                            <input type="text" id="email" pInputText >
+                            <label for="inputtext">E-Mail</label>
+                        </span>
+                    </div>
+
+                    <div class="field col-12 md:col-12">
+                        <span class="p-float-label">
+                            <input type="text" id="password" pInputText >
+                            <label for="inputtext">Passwort</label>
+                        </span>
+                    </div>
+                </div>
+                
+                <button style="background-color: #006eff;border-color: transparent;" pButton pRipple label="Registrieren" type="button" (click)="register2()"></button>
+                
+            </div>
+            
+                
+            
+            
+
+            
+        
+            
+            
+
+            <p>BallerMetrics</p>
+
+            
+        </div>
+    </div>
+</div>

@@ -735,7 +735,7 @@ p:last-child {
   box-shadow: 0 24px 64px -2px rgba(0, 0, 0, 0.02), 0 6px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.08);
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .menu-button {
-  color: #515C66;
+  color: #ffffff;
   background-color: #E8F1F8;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .menu-button:hover {
@@ -743,7 +743,7 @@ p:last-child {
   transition: background-color 0.2s;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li > a > .topbar-icon {
-  color: #515C66;
+  color: #ffffff;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li > a:hover {
   background-color: rgba(232, 241, 248, 0.7);
@@ -751,22 +751,22 @@ p:last-child {
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.search-item .search-input-wrapper input {
   background-color: #E8F1F8;
-  color: #515C66;
+  color: #ffffff;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.search-item .search-input-wrapper input::-moz-placeholder {
-  color: rgba(81, 92, 102, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.search-item .search-input-wrapper input::placeholder {
-  color: rgba(81, 92, 102, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.search-item .search-input-wrapper i {
-  color: #515C66;
+  color: #ffffff;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.user-profile > a {
-  color: #515C66;
+  color: #ffffff;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.user-profile > a > span {
-  color: rgba(81, 92, 102, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li.user-profile > a:hover {
   background-color: transparent;
@@ -796,7 +796,7 @@ p:last-child {
   background-color: #FDFEFF;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li > ul .layout-submenu-header h6 {
-  color: #515C66;
+  color: #ffffff;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-topbar-actions > li > ul > li > a h6 {
   color: #515C66;
@@ -815,7 +815,7 @@ p:last-child {
   transition: background-color 0.2s;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-rightpanel-button {
-  color: #515C66;
+  color: #ffffff;
   background-color: #E8F1F8;
 }
 .layout-topbar-light .layout-topbar .layout-topbar-wrapper .layout-topbar-right .layout-rightpanel-button:hover {
@@ -2404,7 +2404,7 @@ p:last-child {
 }
 
 .login-body {
-  background: linear-gradient(180deg, #525D72 0%, #69768D 100%);
+  background: linear-gradient(180deg, #292929 0%, #343434 100%);
   color: #c3ccdd;
   height: 100vh;
 }

@@ -31,14 +31,19 @@ import {AppInvoiceComponent} from './pages/app.invoice.component';
 import {AppHelpComponent} from './pages/app.help.component';
 import {BlocksComponent} from './blocks/blocks/blocks.component';
 import { MatchesComponent } from './demo/view/matches.component';
+import { RegisterComponent } from './pages/register.component';
+import { VeriComponent } from './pages/veri.component';
+import { BallerguardGuard } from './auth/ballerguard.guard';
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {
                 path: '', component: AppMainComponent,
+                canActivate: [BallerguardGuard],
                 children: [
                     {path: '', component: DashboardDemoComponent},
+                    {path:'dashboard', component: DashboardDemoComponent},
                     {path: 'uikit/formlayout', component: FormLayoutDemoComponent},
                     {path: 'uikit/floatlabel', component: FloatLabelDemoComponent},
                     {path: 'uikit/invalidstate', component: InvalidStateDemoComponent},
@@ -64,13 +69,16 @@ import { MatchesComponent } from './demo/view/matches.component';
                     {path: 'pages/empty', component: EmptyDemoComponent},
                     {path: 'documentation', component: DocumentationComponent},
                     {path: 'blocks', component: BlocksComponent},
-                    {path: 'mathes', component: MatchesComponent}
+                    {path: 'matches', component: MatchesComponent}
+                    
                 ]
             },
             {path: 'error', component: AppErrorComponent},
             {path: 'access', component: AppAccessdeniedComponent},
             {path: 'notfound', component: AppNotfoundComponent},
             {path: 'login', component: AppLoginComponent},
+            {path: 'register', component:RegisterComponent},
+            {path: 'veri', component:VeriComponent},
             {path: '**', redirectTo: '/notfound'},
         ], {scrollPositionRestoration: 'enabled'})
     ],

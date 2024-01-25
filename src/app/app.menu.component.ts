@@ -26,6 +26,7 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'NBA', icon: 'pi pi-fw pi-star-fill', routerLink: ['/uikit'],
                 items: [
+                    {label: 'Latest Matches', icon: 'pi-chevron-right', routerLink: ['/matches']},
                     {
                         label: 'Eastern Conference', icon: 'pi pi-fw pi-align-left',
                         items: [
@@ -93,14 +94,14 @@ export class AppMenuComponent implements OnInit {
                     {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks']},
                     {label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank'},
                 ]
-            },
+            },/*
             {
                 label: 'Utilities', icon: 'pi pi-fw pi-compass', routerLink: ['/utilities'],
                 items: [
                     {label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', routerLink: ['utilities/icons']},
                     {label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank'},
                 ]
-            },
+            },*//*
             {
                 label: 'Pages', icon: 'pi pi-fw pi-briefcase', routerLink: ['/pages'],
                 items: [
@@ -169,7 +170,7 @@ export class AppMenuComponent implements OnInit {
                         label: 'Documentation', icon: 'pi pi-fw pi-info-circle', routerLink: ['/documentation']
                     }
                 ]
-            }
+            }*/
         ];
     }
 }

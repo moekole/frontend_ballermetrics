@@ -2,17 +2,19 @@
     <div class="login-wrapper">
         <div class="login-panel">
             <a [routerLink]="['/']" class="logo">
-                <img src="assets/layout/images/logo-poseidon-dark.svg" alt="poseidon-layout" />
+                <img src="assets/layout/images/logo.png" alt="poseidon-layout" />
             </a>
             <div class="login-form">
-                <h2>Login To Your Premium Account</h2>
-                <p>You don't have an account? <a href="#"> Sign up</a></p>
-                <input type="text" autocomplete="off" pInputText placeholder="Email">
-                <input type="password" autocomplete="off" pInputText placeholder="Password">
-                <button pButton pRipple label="LOGIN" type="button"></button>
+                <h2>Login</h2>
+                <p>Hast du noch keinen Account? <a [routerLink]="'/register'"> Registrieren</a></p>
+                <p>Wir haben Ihnen per Mail eine E-Mail geschickt.<br> Bitte betätigen Sie diese zuvor.</p>
+                <input type="text" autocomplete="off" pInputText id="email" placeholder="Email">
+                <input type="password" autocomplete="off" pInputText id="password" placeholder="Password">
+                <button style="background-color: #006eff;border-color: transparent;" pButton pRipple label="LOGIN" type="button" (click)="login()"></button>
+                
             </div>
 
-            <p>A problem? <a href="#">Click here</a> and let us help you.</p>
+            <p style="visibility: hidden;">A problem? <a href="#">Click here</a> and let us help you.</p>
         </div>
     </div>
 </div>
