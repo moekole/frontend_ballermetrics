@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppMainComponent} from './app.main.component';
+import { jwtDecode } from 'jwt-decode';
 
 // Define a global constant string
 export const GLOBAL_CONSTANT_STRING: string = "Default Name";
@@ -33,7 +34,7 @@ export const GLOBAL_CONSTANT_STRING: string = "Default Name";
                             >
                             <a href="#">
                                 <img class="profile-image" src="assets/layout/images/avatar-profile.png" alt="demo">
-                                <div class="profile-info">
+                                <div class="profile-info" id="nametopbar">
                                     <h6>${GLOBAL_CONSTANT_STRING}</h6>
                                     <span>Lakers-Fan</span>
                                 </div>
@@ -88,16 +89,43 @@ export class AppTopBarComponent {
 
     private accountname: string = "Benjamin";
 
-
     ngOnInit(){
         this.loadname;
         console.log("bin da");
+        
+        const accessLogin = localStorage.getItem('accesstoken');
+        const accessauth = localStorage.getItem('accesstokenauth');
+
+        const decodedToken: any = jwtDecode(accessLogin);
+
+        const exp: number = decodedToken.sub;
+
+        var options2 = {
+            method: 'GET'
+        };
+
+          
+          fetch("https://ballermetrics-backend2.onrender.com/user/name/"+exp, options2)
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
+                this.loadname(result);
+            })
+            .catch(error => console.log('error', error));
 
         
     }
+    
 
-    loadname(){
-        console.log("namen");
+    loadname(json:any){
+        const name = json['token'];
+        var output="";
+
+        output=(`<h6>${name}</h6>
+        <span>Lakers-Fan</span>`);
+
+        document.getElementById('nametopbar').innerHTML = output;
+
     }
 
 }
