@@ -27,10 +27,11 @@ export class AppMenuComponent implements OnInit {
                 label: 'NBA', icon: 'pi pi-fw pi-star-fill', routerLink: ['/uikit'],
                 items: [
                     {label: 'Latest Matches', icon: 'pi-chevron-right', routerLink: ['/matches']},
+                    {label: 'Teams', icon: 'pi-chevron-right', routerLink: ['/teams']},
                     {
                         label: 'Eastern Conference', icon: 'pi pi-fw pi-align-left',
                         items: [
-                            {label: 'Boston Celtics', icon: 'pi pi-fw pi-align-left'},
+                            {label: 'Boston Celtics', icon: 'pi pi-fw pi-align-left', routerLink: ['/matches']},
                             {label: 'Brooklyn Nets', icon: 'pi pi-fw pi-align-left'},
                             {label: 'New York Knicks', icon: 'pi pi-fw pi-align-left'},
                             {label: 'Philadelphia 76ers', icon: 'pi pi-fw pi-align-left'},

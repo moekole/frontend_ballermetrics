@@ -90,6 +90,17 @@ export class DashboardDemoComponent implements OnInit {
                     this.showPlayers(result);
                 })
                 .catch(error => console.log('error', error));
+
+                const options3: RequestInit = {
+                    method: 'GET',
+                    redirect: 'follow' as RequestRedirect
+                };
+                
+                fetch("http://api.sportradar.us/nba/trial/v8/en/games/2023/REG/schedule.json?api_key=xyrtk3e9hym8pxta3v9t47my", options3)
+                    .then(response => response.text())
+                    .then(result => console.log(result))
+                    .catch(error => console.log('error', error));
+                
             
 
 

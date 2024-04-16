@@ -143,6 +143,10 @@ import {AppBreadcrumbService} from './app.breadcrumb.service';
 import { MatchesComponent } from './demo/view/matches.component';
 import { RegisterComponent } from './pages/register.component';
 import { VeriComponent } from './pages/veri.component';
+import { AllplayersComponent } from './demo/view/allplayers.component';
+import { PlayerlistComponent } from './demo/view/playerlist.component';
+import { TeamsviewComponent } from './demo/view/teamsview.component';
+import { TeamsComponent } from './demo/view/teams.component';
 
 @NgModule({
     imports: [
@@ -277,7 +281,11 @@ import { VeriComponent } from './pages/veri.component';
         BlockViewer,
         MatchesComponent,
         RegisterComponent,
-        VeriComponent
+        VeriComponent,
+        AllplayersComponent,
+        PlayerlistComponent,
+        TeamsviewComponent,
+        TeamsComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

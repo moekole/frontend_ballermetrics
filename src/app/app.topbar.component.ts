@@ -35,7 +35,7 @@ export const GLOBAL_CONSTANT_STRING: string = "Default Name";
                             <a href="#">
                                 <img class="profile-image" src="assets/layout/images/avatar-profile.png" alt="demo">
                                 <div class="profile-info" id="nametopbar">
-                                    <h6>${GLOBAL_CONSTANT_STRING}</h6>
+                                    <p-skeleton width="10rem" styleClass="mb-2"></p-skeleton>
                                     <span>Lakers-Fan</span>
                                 </div>
                             </a>
@@ -123,7 +123,7 @@ export class AppTopBarComponent {
 
         output=(`<h6>${name}</h6>
         <span>Lakers-Fan</span>`);
-
+        
         document.getElementById('nametopbar').innerHTML = output;
 
     }

@@ -34,13 +34,16 @@ import { MatchesComponent } from './demo/view/matches.component';
 import { RegisterComponent } from './pages/register.component';
 import { VeriComponent } from './pages/veri.component';
 import { BallerguardGuard } from './auth/ballerguard.guard';
+import { AllplayersComponent } from './demo/view/allplayers.component';
+import { PlayerlistComponent } from './demo/view/playerlist.component';
+import { TeamsviewComponent } from './demo/view/teamsview.component';
 
 @NgModule({
     imports: [
         RouterModule.forRoot([
             {
                 path: '', component: AppMainComponent,
-                canActivate: [BallerguardGuard],
+                //canActivate: [BallerguardGuard],
                 children: [
                     {path: '', component: DashboardDemoComponent},
                     {path:'dashboard', component: DashboardDemoComponent},
@@ -69,7 +72,10 @@ import { BallerguardGuard } from './auth/ballerguard.guard';
                     {path: 'pages/empty', component: EmptyDemoComponent},
                     {path: 'documentation', component: DocumentationComponent},
                     {path: 'blocks', component: BlocksComponent},
-                    {path: 'matches', component: MatchesComponent}
+                    {path: 'matches', component: MatchesComponent},
+                    {path: 'allplayers', component: AllplayersComponent},
+                    {path: 'playerlist', component: PlayerlistComponent},
+                    {path: 'teams', component: TeamsviewComponent}
                     
                 ]
             },
