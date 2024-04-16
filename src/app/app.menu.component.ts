@@ -85,7 +85,7 @@ export class AppMenuComponent implements OnInit {
                     {label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts']},
                     {label: 'Misc', icon: 'pi pi-fw pi-circle-off', routerLink: ['/uikit/misc']}*/
                 ]
-            },
+            }/*,
             {
                 label:'Euroleague', icon:'pi pi-fw pi-prime', routerLink: ['/blocks'],
                 items:[
@@ -95,7 +95,7 @@ export class AppMenuComponent implements OnInit {
                     {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks']},
                     {label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank'},
                 ]
-            },/*
+            },*//*
             {
                 label: 'Utilities', icon: 'pi pi-fw pi-compass', routerLink: ['/utilities'],
                 items: [

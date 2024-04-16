@@ -43,7 +43,7 @@ import { TeamsviewComponent } from './demo/view/teamsview.component';
         RouterModule.forRoot([
             {
                 path: '', component: AppMainComponent,
-                //canActivate: [BallerguardGuard],
+                canActivate: [BallerguardGuard],
                 children: [
                     {path: '', component: DashboardDemoComponent},
                     {path:'dashboard', component: DashboardDemoComponent},
